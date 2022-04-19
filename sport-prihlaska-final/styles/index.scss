@@ -1,0 +1,203 @@
+$zelena: rgb(141, 255, 75);
+$pismo: rgb(46, 46, 46);
+$pozadi: rgb(241, 241, 241);
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: $pozadi;
+  color: $pismo;
+}
+
+header {
+  width: 100%;
+  height: 75vh;
+  position: relative;
+}
+
+.header-wrap {
+  position: relative;
+  background-color: black;
+}
+
+.header-wrap::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 75vh;
+  opacity: 0.6;
+  background-image: url("../images/header-min.avif");
+  background-repeat: no-repeat;
+  background-position-y: -100px;
+  background-size: cover;
+}
+
+h1 {
+  color: white;
+  text-transform: capitalize;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 50px;
+  padding: 180px 0 0 100px;
+}
+
+nav {
+  top: 0px;
+  position: sticky;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(
+    19deg,
+    rgba(2, 184, 0, 1) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  z-index: 100;
+  font-weight: bold;
+}
+
+ul {
+  height: 100%;
+  vertical-align: middle;
+  margin: 0;
+  line-height: 50px;
+}
+
+li {
+  display: inline-block;
+  text-align: center;
+  height: 100%;
+  width: 150px;
+  transition: 0.5s;
+}
+
+li:hover {
+  background-color: $zelena;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: $pismo;
+}
+
+h2 {
+  text-align: center;
+  font-size: 35px;
+  padding-top: 70px;
+  line-height: 80px;
+}
+
+p {
+  font-size: 25px;
+  text-align: center;
+  padding: 0 20px 0 20px;
+}
+
+h2:first-child {
+  padding-top: 150px;
+}
+
+.container {
+  position: relative;
+  width: 70%;
+  height: 100%;
+  margin: auto;
+  padding-bottom: 200px;
+  background-color: white;
+}
+
+form {
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  padding-top: 40px;
+}
+
+label {
+  line-height: 40px;
+}
+
+input {
+  width: 400px;
+  color: $pismo;
+  height: 30px;
+}
+
+#submit {
+  width: 200px;
+  margin-top: 50px;
+  height: 50px;
+  transition: 0.5s;
+}
+
+#submit:hover {
+  background-color: $zelena;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+table {
+  width: 50%;
+  margin: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+td {
+  border: 1px solid black;
+  height: 35px;
+}
+
+th {
+  text-align: center;
+  height: 50px;
+  background-color: $zelena;
+  border: 1px solid black;
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .header-wrap::before {
+    background-position-y: 0px;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  li {
+    display: block;
+    width: 100%;
+  }
+
+  li:nth-child(2) {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+
+  nav {
+    height: 100%;
+  }
+
+  table {
+    width: 90%;
+  }
+
+  h2 {
+    line-height: 50px;
+  }
+
+  #name,
+  #city {
+    width: 90%;
+  }
+}
